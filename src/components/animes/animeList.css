@@ -1,0 +1,47 @@
+.anime-category{
+    background-color: var(--secondaryBackgroundColor);
+    }
+.anime-category .headings{
+    display: flex;
+    justify-content: center;
+    
+}
+.anime-category .headings h2{
+   position: relative;
+   color: var(--secondaryColor);
+
+
+}
+.anime-category .headings h2:before{
+    content: '';
+    position: absolute;
+    top:calc(100% + 10px);
+    left: 10%;
+    width: 80%;
+    height: 2px;
+    background-color: var(--secondaryColor);
+
+
+}
+.anime-category .headings h2:after{
+    content: '';
+    position: absolute;
+    top: calc(100%  + 5px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height:10px;
+    border: 2px solid var(--secondaryColor);
+    border-radius: 50%;
+    background-color: white;
+
+
+}
+.anime-category .animes{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+}

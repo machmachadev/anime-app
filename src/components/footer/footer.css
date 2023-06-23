@@ -1,0 +1,7 @@
+footer{
+    background-color: #030205;
+}
+span{
+    text-transform: capitalize;
+    color: var(--secondaryColor);
+}

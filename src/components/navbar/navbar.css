@@ -1,0 +1,128 @@
+.header{
+    position: sticky;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: var(--mainColorBackground);
+    color: var(--textColor);
+    
+
+}
+.header .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header .container h1{
+    flex-basis: 30%;
+    font-size: 30px;
+}
+.header .container h1 span{
+    color: var(--secondaryColor);
+}
+.header .container nav{
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .container nav .anime-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+
+}
+.header .container nav .anime-links li{
+    font-size: 15px;
+    color: var(--textColor);
+
+
+}
+.anime-link{
+    color: var(--textColor);
+    text-decoration: none;
+}
+.anime-link:active,.anime-link:hover{
+    color: var(--secondaryColor);
+}
+.header .container nav .buttons button{
+    background-color: transparent;
+    padding: 5px 15px;
+    color: var(--textColor);
+    border :none;
+    cursor: pointer;
+    font-size: 15px;
+
+}
+.header .container nav .buttons button.register{
+    border-radius: 10px;
+    background-color: var(--secondaryColor);
+    border: 2px solid var(--secondaryColor);
+}
+.header .container nav .buttons button.register:hover{
+    background-color: transparent;
+    color: var(--secondaryColor);
+}
+.header .container nav .buttons button.login:hover{
+    color: var(--secondaryColor);
+
+}
+.toggle{
+    display: none;
+    border: none;
+    font-size: 30px;
+    color: white;
+    background-color: transparent;
+}
+
+@media  (max-width: 992px) {
+    .header .container h1{
+        font-size: 100%;
+    }
+    .header{
+        position: relative;
+
+    }
+    .toggle{
+        display: block;
+    }
+    .header .container{
+        justify-content: space-between;
+    }
+
+    .header .container nav{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 0;
+        overflow: hidden;
+        border-top: 1px solid var(--secondaryColor);
+        display: block;
+        background-color: #030205;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        z-index: 11;
+
+
+    }
+    .header .container nav.active{
+        width: 100%;
+        
+        
+        
+    }
+    .header .container nav .anime-links{
+        display: block;
+        margin-bottom: 20px;
+
+
+    }
+    .header .container nav .anime-links li{
+        padding: 5px 15px;
+
+    }
+
+
+}
